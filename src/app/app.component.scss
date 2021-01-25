@@ -1,0 +1,55 @@
+$grid-offset: 6px;
+$result-item-size: 28px;
+$result-item-border-color: #eeeeee;
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.form-field,
+.move-group {
+  margin-bottom: $grid-offset * 2;
+}
+
+.move-group {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: $grid-offset;
+  }
+}
+
+.move-label {
+  margin-bottom: $grid-offset;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $grid-offset * 3;
+
+  &__label {
+    width: 100%;
+    margin-bottom: $grid-offset;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: $grid-offset / 2;
+    padding: $grid-offset / 2;
+    min-width: $result-item-size;
+    min-height: $result-item-size;
+    border: 1px solid $result-item-border-color;
+    cursor: pointer;
+  }
+}
